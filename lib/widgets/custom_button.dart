@@ -3,14 +3,16 @@ import 'package:zoom_clone/utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-  const CustomButton({Key? key, required this.text}) : super(key: key);
+  final VoidCallback onPressed;
+  const CustomButton({Key? key, required this.text, required this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: buttonColor,
           minimumSize: const Size(

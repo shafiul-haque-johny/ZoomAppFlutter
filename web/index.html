@@ -16,6 +16,7 @@
   -->
   <base href="$FLUTTER_BASE_HREF">
 
+  <meta name="google-signin-client_id" content="1076788970315-t6v32hmhtjgka5i1s4jr7k74q397p501.apps.googleusercontent.com">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -40,6 +41,27 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAb7y2eWKTmOFYyShlHLfsRdJisJ9NJYkE",
+      authDomain: "zoom-clone-18c2b.firebaseapp.com",
+      projectId: "zoom-clone-18c2b",
+      storageBucket: "zoom-clone-18c2b.appspot.com",
+      messagingSenderId: "1076788970315",
+      appId: "1:1076788970315:web:37bf79504fbaab9256dece"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
