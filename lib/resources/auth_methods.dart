@@ -4,11 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:zoom_clone/utils/utils.dart';
 
+//
+
 class AuthMethods {
   final FirebaseAuth auth = FirebaseAuth.instance;
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   Stream<User?> get authChanges => auth.authStateChanges();
+  User get user => auth.currentUser!;
 
   Future<bool> signInWithGoogle(BuildContext context) async {
     bool result = false;
@@ -42,5 +45,13 @@ class AuthMethods {
       result = false;
     }
     return result;
+  }
+
+  void signOut() async {
+    try {
+      auth.signOut();
+    } catch (error) {
+      print(error);
+    }
   }
 }

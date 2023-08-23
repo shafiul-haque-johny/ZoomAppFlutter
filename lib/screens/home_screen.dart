@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:zoom_clone/resources/auth_methods.dart';
+import 'package:zoom_clone/screens/history_screen.dart';
 import 'package:zoom_clone/utils/colors.dart';
+import 'package:zoom_clone/widgets/custom_button.dart';
+
+import 'meeting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,14 +22,24 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  List<Widget> pages = [
+    MeetingScreen(), // meet & char
+    const HistoryScreen(), // Messages
+    const Text('Contacts'), // Contacts
+    CustomButton(
+        text: 'Log Out', onPressed: () => AuthMethods().signOut()), // Setting
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: backgroundColor,
         elevation: 0,
         title: const Text('Meet & Chat'),
         centerTitle: true,
       ),
+      body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: footerColor,
         selectedItemColor: Colors.white,
@@ -57,12 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
               Icons.settings_outlined,
             ),
             label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.comment_bank,
-            ),
-            label: 'Meet & Char',
           ),
         ],
       ),
