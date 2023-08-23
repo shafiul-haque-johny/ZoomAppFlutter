@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:zoom_clone/resources/jitsi_meet_methods.dart';
+import 'package:zoom_clone/utils/colors.dart';
 
 import '../widgets/home_meeting_button.dart';
 
@@ -56,6 +57,7 @@ class MeetingScreen extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
+                color: titleColor,
               ),
             ),
           ),

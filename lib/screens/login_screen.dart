@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zoom_clone/resources/auth_methods.dart';
+import 'package:zoom_clone/utils/colors.dart';
 import 'package:zoom_clone/widgets/custom_button.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -23,6 +24,7 @@ class _LogInScreenState extends State<LogInScreen> {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
+              color: titleColor,
             ),
           ),
           Padding(

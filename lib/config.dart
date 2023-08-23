@@ -1,12 +1,12 @@
 // Create Firebase app, add to web, then copy those api (key, domain, projectId, bucket, msgSenderId, appId.
 
 class Configurations {
-  static const _apiKey = "AIzaSyAb7y2eWKTmOFYyShlHLfsRdJisJ9NJYkE";
-  static const _authDomain = "zoom-clone-18c2b.firebaseapp.com";
-  static const _projectId = "zoom-clone-18c2b";
-  static const _storageBucket = "zoom-clone-18c2b.appspot.com";
-  static const _messagingSenderId = "1076788970315";
-  static const _appId = "1:1076788970315:web:37bf79504fbaab9256dece";
+  static const _apiKey = "Your Values";
+  static const _authDomain = "Your Values";
+  static const _projectId = "Your Values";
+  static const _storageBucket = "Your Values";
+  static const _messagingSenderId = "Your Values";
+  static const _appId = "Your Values";
 
 //Make some getter functions
   String get apiKey => _apiKey;

@@ -36,7 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: 0,
-        title: const Text('Meet & Chat'),
+        title: const Text(
+          'Meet & Chat',
+          style: TextStyle(
+              color: Color.fromRGBO(115, 78, 222, 1.0),
+              fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: pages[_page],
@@ -53,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(
               Icons.comment_bank,
             ),
-            label: 'Meet & Char',
+            label: 'Meet & Chat',
           ),
           BottomNavigationBarItem(
             icon: Icon(

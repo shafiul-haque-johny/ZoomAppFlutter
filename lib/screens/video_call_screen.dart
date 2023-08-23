@@ -55,9 +55,7 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
         backgroundColor: backgroundColor,
         title: const Text(
           'Join a Meeting',
-          style: TextStyle(
-            fontSize: 18,
-          ),
+          style: TextStyle(fontSize: 18),
         ),
         centerTitle: true,
       ),

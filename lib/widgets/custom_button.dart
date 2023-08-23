@@ -9,25 +9,36 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            gradient1,
+            gradient2,
+            gradient3,
+          ],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+        ),
+        borderRadius: BorderRadius.circular(40.0),
+      ),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: buttonColor,
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          //backgroundColor: titleColor,
           minimumSize: const Size(
             double.infinity,
             50,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
-            side: const BorderSide(color: buttonColor),
           ),
         ),
         child: Text(
           text,
           style: const TextStyle(
             fontSize: 17,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),
